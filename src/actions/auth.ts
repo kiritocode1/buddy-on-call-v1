@@ -2,6 +2,7 @@
 
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
+// import {Effect} from "effect"
 
 /**
  * Server Action to get the current session and user
