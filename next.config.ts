@@ -1,4 +1,4 @@
-import type { NextConfig } from "next";
+  import type { NextConfig } from "next";
 
 // Validate environment variables at build/start time
 import "./src/env";

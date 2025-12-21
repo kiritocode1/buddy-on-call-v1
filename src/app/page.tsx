@@ -1,13 +1,21 @@
-import { ComponentExample } from "@/components/component-example";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { Navbar } from "@/components/navbar";
+import { Hero } from "@/components/hero";
+import { Problem } from "@/components/problem";
+import { Activities } from "@/components/activities";
+import { Testimonials } from "@/components/testimonials-section";
+import { FAQ } from "@/components/faq";
+import { Footer } from "@/components/footer";
 
 export default function Page() {
     return (
-        <div className="flex min-h-screen flex-col items-center justify-center gap-4">
-            <div className="fixed top-4 right-4">
-                <ThemeToggle />
-            </div>
-            <ComponentExample />
-        </div>
+        <main className="min-h-screen bg-background">
+            <Navbar />
+            <Hero />
+            <Problem />
+            <Activities />
+            <Testimonials />
+            <FAQ />
+            <Footer />
+        </main>
     );
 }
