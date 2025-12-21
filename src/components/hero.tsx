@@ -1,6 +1,15 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { Component as RadialIntro } from "@/components/design/radial-intro"
+
+const ORBIT_ITEMS = [
+    { id: 1, name: "Walking", src: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=500&auto=format&fit=crop&q=60" },
+    { id: 2, name: "Coffee", src: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&auto=format&fit=crop&q=60" },
+    { id: 3, name: "Music", src: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&auto=format&fit=crop&q=60" },
+    { id: 4, name: "Chess", src: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=500&auto=format&fit=crop&q=60" },
+    { id: 5, name: "Gardening", src: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=500&auto=format&fit=crop&q=60" },
+]
 
 export function Hero() {
     const line1 = "BuddyOnCall: Transforming Lives"
@@ -9,6 +18,9 @@ export function Hero() {
     return (
         <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden">
             {/* Background gradients */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none opacity-50">
+                <RadialIntro orbitItems={ORBIT_ITEMS} stageSize={600} imageSize={80} />
+            </div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[100px] pointer-events-none" />
 

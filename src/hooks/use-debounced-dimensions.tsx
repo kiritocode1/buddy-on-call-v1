@@ -1,15 +1,15 @@
 import { useState, useEffect, RefObject } from 'react';
 
 interface Dimensions {
-width: number;
-height: number;
+  width: number;
+  height: number;
 }
 
 export function useDimensions(ref: RefObject<HTMLElement | SVGElement>): Dimensions {
   const [dimensions, setDimensions] = useState<Dimensions>({ width: 0, height: 0 });
 
-useEffect(() => {
-let timeoutId: NodeJS.Timeout;
+  useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
 
     const updateDimensions = () => {
       if (ref.current) {
@@ -33,7 +33,7 @@ let timeoutId: NodeJS.Timeout;
       clearTimeout(timeoutId);
     };
 
-}, [ref]);
+  }, [ref]);
 
-return dimensions;
+  return dimensions;
 }
